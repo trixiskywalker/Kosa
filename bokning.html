@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="sv">
+   <head>
+       <meta charset="utf-8">
+       <title>Kosa - Mot Vida Vyer</title>
+       <meta name="viewport" content="width=device-width,initial-scale=1.0">
+       <link rel="stylesheet" type="text/css" href="kosa.css">
+   </head>
+ 
+   <body>
+        <!--Knapp skip to main content-->
+   <a href="#main" class="skipcontent">Hoppa till innehåll sidan</a>
+ 
+   <!--Header med navigation-->
+   <header class="header">
+       <section class="logo">
+           <h1><a class="logoLink" href="index.html">Kosa</a></h1>
+           <h2><a class="logoLink" href="index.html">Mot Vida Vyer</a></h2>
+       </section>
+       <div class="menu">
+           <nav>
+               <a class="menuItem" href="index.html">Hem</a>
+               <a class="menuItem"  href="resepaket.html">Resepaket</a>
+               <a class="menuItem"  href="bokning.html">Bokning</a>
+               <a class="menuItem"  href="info.html">Info</a>
+           </nav>
+        </div>
+   </header>
+ 
+<!--Bokningsformulär-->
+ 
+   <section class="book-trip" id="main">
+   <h3>Boka din resa</h3>
+   </section>
+  
+   <form>
+ 
+   <!--Steg 1-->
+<div class="travel">
+    <fieldset>
+        <legend>Steg 1 - Resemål</legend>
+ 
+   <!--Flyg från-->
+   <p>
+   <label for="fly-from">Flyg från</label>
+   <select name="departure" id="fly-from" required>
+       <option value="">Välj flygplats</option>
+       <option value="Stockholm - Arlanda">Stockholm - Arlanda</option>
+       <option value="Göteborg - Landvetter">Göteborg - Landvetter</option>
+       <option value="Malmö - Sturup">Malmö - Sturup</option>
+   </select>
+   </p>
+ 
+   <!--Resepaket-->
+   <p>
+      Resepaket <br>
+       <input type="radio" name="resepaket" id="Basic" value="basic">
+       <label for="Basic">Basic</label>
+       <br>
+       <input type="radio" name="resepaket" id="luxe" value="luxe">
+       <label for="luxe">Luxe</label>
+       <br>
+       <input type="radio" name="resepaket" id="deluxe" value="deluxe">
+       <label for="deluxe">Deluxe</label>
+   </p>
+  
+   <!--När?-->
+   <p>
+       <label for="date">När?</label>
+       <input type="date" name="date" id="date" required>
+   </p>
+ 
+   <!--Hur länge?-->
+   <p>
+       <label for="howLong">Hur länge?</label>
+       <select name="howLong" id="howLong" required>
+           <option value="">Välj hur länge</option>
+           <option value="Långweekend (4 dagar)">Långweekend (4 dagar)</option>
+           <option value="1 vecka">1 vecka</option>
+           <option value="10 dagar">10 dagar</option>
+           <option value="2 veckor">2 veckor</option>
+       </select>
+   </p>
+ 
+     <!--Antal resenärer-->
+     <p>
+       <label for="quantity">Antal resenärer</label>
+       <input type="number" name="quantity" id="quantity" min="1" max="10" step="1" required>
+   </p>
+   </fieldset>
+</div>
+ 
+<!--Steg 2-->
+<div class="contact-info">
+<fieldset>
+   <legend>Steg 2 - Kontaktinformation</legend>
+   <!--Namn-->
+     <p>
+       <label for="name">Namn:</label>
+       <input type="text" name="name" id="name" placeholder="För- och efternamn" required>
+   </p>
+ 
+   <!--Födelsedatum-->
+   <p>
+       <label for="birthDate">Födelsedatum:</label>
+       <input type="date" name="birthDate" id="birthDate" required>
+   </p>
+ 
+   <!--Pass-->
+   <p>
+       <label for="passport">Passnummer:</label>
+       <input type="number" name="pass" id="passport" placeholder="xxxxxxxx" required>
+   </p>
+ 
+   <!--Email-->
+   <p>
+       <label for="email">Email:</label>
+       <input type="email" name="email" id="email" placeholder="exempel@exempel.com" required>
+   </p>
+ 
+   <!--Telefonnummer-->
+   <p>
+       <label for="mobile">Mobilnummer:</label>
+       <input type="tel" name="mobile" id="mobile" placeholder="070-123 45 67">
+   </p>
+ 
+   <!--Uppdateringar-->
+   <p>
+       <p> Jag vill få uppdateringar om min resa till min:</p><br>
+       <input type="checkbox" name="Email">
+       <label for="Email">Email</label>
+       <input type="checkbox" name="Phone">
+       <label for="Phone">Mobil</label>
+   </p>
+ 
+   </fieldset>
+   </div>
+ 
+<!--Steg 3-->
+   <div class="exclusive-offer">
+       <fieldset>
+           <legend>Steg 3 - Rabattkod</legend>
+           <p>
+               <label for="offer">Har du en rabattkod?</label>
+               <input  type="text" name="offer" id="offer" placeholder="Skriv in rabattkod här...">
+           </p>
+       </fieldset>
+       </div>
+ 
+<!--Steg 4-->
+       <div class="booking">
+           <fieldset>
+               <legend>Steg 4 - Ta mig till Kroatien!</legend>
+                   <p>
+                   <button type="submit">Boka resa</button>
+                  </p>
+           </fieldset>
+           </div>
+ 
+   </form>
+ 
+<!--Bild-->
+<img src="images/bokning.jpg" class="boka-resa" alt="kvinna på strand i kroatien">
+ 
+    <!--Frågeknapp-->
+    <a class="rounded-button" href="info.html">
+       <ion-icon name="help-outline" size="large"></ion-icon>
+   </a>
+ 
+   <!--Footer-->
+   <footer>
+       <aside>
+           <h4>Address</h4>
+           <p>Klarabergsgatan 35-31, 111 21</p>
+           <p>Stockholm, sverige</p>
+       </aside>
+       <aside>
+           <h4>Kontakt</h4>
+           <p>Tel: <a href="#">070-7652345</a></p>
+           <p>Email: <a href="#">info@kosabokning.se</a></p>
+       </aside>
+       <aside>
+           <h4>Terms and Conditions</h4>
+           <p><a href="#">Privacy Policy</a></p>
+           <p><a href="#">Cookie Policy</a></p>
+           <p><a href="#">Booking terms and conditions</a></p>
+       </aside>
+   </footer>
+ 
+  
+<!--Länk till ikonbibliotek-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
